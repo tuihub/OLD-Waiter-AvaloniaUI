@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TuiHub.Protos" Version="0.2.4" />
+  </ItemGroup>
+
 </Project>
