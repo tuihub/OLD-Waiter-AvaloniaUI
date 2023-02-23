@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace Waiter
+namespace Waiter.Views
 {
     public partial class MainWindow : Window
     {
