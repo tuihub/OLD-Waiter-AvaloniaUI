@@ -16,7 +16,8 @@
 		<SplitView.Pane>
 			<DockPanel>
 				<Button DockPanel.Dock="Bottom"
-						Height="48">
+						Height="48"
+						Command="{Binding UserCommand}">
 					User
 				</Button>
 				<StackPanel>

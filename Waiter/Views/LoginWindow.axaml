@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:vm="using:Waiter.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="150"
+        x:Class="Waiter.Views.LoginWindow"
+        Title="Login">
+
+	<Design.DataContext>
+		<vm:LoginWindowViewModel/>
+	</Design.DataContext>
+	
+	<Grid ShowGridLines="False"
+		  RowDefinitions="*, *, *, *"
+		  ColumnDefinitions="Auto, *">
+		<TextBlock Grid.Row="0" Grid.Column="0">Username</TextBlock>
+		<TextBlock Grid.Row="1" Grid.Column="0">Password</TextBlock>
+		<TextBox Grid.Row="0" Grid.Column="1" Watermark="Username"></TextBox>
+		<TextBox Grid.Row="1" Grid.Column="1" PasswordChar="*" Watermark="Password"></TextBox>
+		<CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">Save login info</CheckBox>
+		<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Command="{Binding LoginCommand}">Login</Button>
+	</Grid>
+</Window>

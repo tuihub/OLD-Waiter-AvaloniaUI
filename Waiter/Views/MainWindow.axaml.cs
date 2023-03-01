@@ -8,5 +8,11 @@ namespace Waiter.Views
         {
             InitializeComponent();
         }
+
+        public async void UserCommand()
+        {
+            var loginWindow = new LoginWindow();
+            await loginWindow.ShowDialog(this);
+        }
     }
 }
