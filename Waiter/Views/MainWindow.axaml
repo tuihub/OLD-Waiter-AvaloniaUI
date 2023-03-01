@@ -12,6 +12,24 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<SplitView DisplayMode="CompactOverlay">
+		<SplitView.Pane>
+			<DockPanel>
+				<Button DockPanel.Dock="Bottom"
+						Height="48">
+					User
+				</Button>
+				<StackPanel>
+					<TextBlock Height="48">
+						Pane
+					</TextBlock>
+					<TextBlock Height="48">
+						App
+					</TextBlock>
+				</StackPanel>
+			</DockPanel>
+		</SplitView.Pane>
+		<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	</SplitView>
 
 </Window>
