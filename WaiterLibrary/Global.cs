@@ -11,7 +11,7 @@ namespace WaiterLibrary
     {
         private static GrpcChannel? _channel;
 
-        public static string ServerURL = "https://theam.gyx.moe";
+        public static string ServerURL = "https://theam-grpc.gyx.moe";
         public static GrpcChannel Channel
         {
             get => _channel ??= GrpcChannel.ForAddress(ServerURL);
