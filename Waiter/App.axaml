@@ -8,5 +8,17 @@
 
     <Application.Styles>
         <FluentTheme Mode="Light"/>
+		<Style Selector="TextBlock">
+			<Setter Property="FontFamily" Value="/Assets/SourceHanSansCN-Regular.otf#Source Han Sans CN"></Setter>
+		</Style>
+		<Style Selector="TextBox">
+			<Setter Property="FontFamily" Value="/Assets/SourceHanSansCN-Regular.otf#Source Han Sans CN"></Setter>
+		</Style>
+		<Style Selector="MaskedTextBox">
+			<Setter Property="FontFamily" Value="/Assets/SourceHanSansCN-Regular.otf#Source Han Sans CN"></Setter>
+		</Style>
+		<Style Selector="Button">
+			<Setter Property="FontFamily" Value="/Assets/SourceHanSansCN-Regular.otf#Source Han Sans CN"></Setter>
+		</Style>
     </Application.Styles>
 </Application>
