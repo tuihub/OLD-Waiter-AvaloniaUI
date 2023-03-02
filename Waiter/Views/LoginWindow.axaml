@@ -5,15 +5,18 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="150"
 		x:Class="Waiter.Views.LoginWindow"
-		Title="Login">
+		Title="Login"
+		Width="250" Height="150"
+		WindowStartupLocation="CenterOwner"
+		CanResize="False">
 
 	<Design.DataContext>
 		<vm:LoginWindowViewModel/>
 	</Design.DataContext>
 	
 	<Grid ShowGridLines="False"
-		  RowDefinitions="*, *, *, *"
-		  ColumnDefinitions="Auto, *">
+		  RowDefinitions="*,*,*,*"
+		  ColumnDefinitions="Auto,*">
 		<TextBlock Grid.Row="0" Grid.Column="0">Username</TextBlock>
 		<TextBlock Grid.Row="1" Grid.Column="0">Password</TextBlock>
 		<TextBox Grid.Row="0" Grid.Column="1" Watermark="Username"></TextBox>
