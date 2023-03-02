@@ -18,7 +18,7 @@
 				<Button DockPanel.Dock="Bottom"
 						Height="48"
 						Command="{Binding UserCommand}">
-					User
+					用户
 				</Button>
 				<StackPanel>
 					<TextBlock Height="48">
