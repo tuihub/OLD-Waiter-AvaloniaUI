@@ -1,18 +1,26 @@
 using Avalonia.Controls;
+using Avalonia.ReactiveUI;
+using ReactiveUI;
+using System.Threading.Tasks;
+using Waiter.ViewModels;
 
 namespace Waiter.Views
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         public MainWindow()
         {
             InitializeComponent();
+            this.WhenActivated(d => d(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
         }
 
-        public async void UserCommand()
+        private async Task DoShowDialogAsync(InteractionContext<MainWindowViewModel, LoginWindowViewModel?> interaction)
         {
-            var loginWindow = new LoginWindow();
-            await loginWindow.ShowDialog(this);
+            var loginDialog = new LoginWindow();
+            loginDialog.DataContext = interaction.Input;
+
+            var result = await loginDialog.ShowDialog<LoginWindowViewModel>(this);
+            interaction.SetOutput(result);
         }
     }
 }
