@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using Waiter.ViewModels;
 
 namespace Waiter.Views
 {

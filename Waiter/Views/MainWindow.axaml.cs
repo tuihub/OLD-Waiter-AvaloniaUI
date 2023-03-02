@@ -17,7 +17,8 @@ namespace Waiter.Views
         private async Task DoShowDialogAsync(InteractionContext<MainWindowViewModel, LoginWindowViewModel?> interaction)
         {
             var loginDialog = new LoginWindow();
-            loginDialog.DataContext = interaction.Input;
+            //loginDialog.DataContext = interaction.Input;
+            loginDialog.DataContext = new LoginWindowViewModel();
 
             var result = await loginDialog.ShowDialog<LoginWindowViewModel>(this);
             interaction.SetOutput(result);

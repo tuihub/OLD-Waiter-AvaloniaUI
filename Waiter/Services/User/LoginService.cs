@@ -22,6 +22,7 @@ namespace Waiter.Services.User
                 var messageBox = MessageBox.Avalonia.MessageBoxManager.GetMessageBoxStandardWindow(
                     "Error", $"Exception: {ex.Message}");
                 await messageBox.Show();
+                return;
             }
             catch (Exception)
             {
