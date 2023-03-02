@@ -14,11 +14,8 @@ namespace WaiterLibrary
         public static string ServerURL = "https://theam.gyx.moe";
         public static GrpcChannel Channel
         {
-            get
-            {
-                return _channel ??= GrpcChannel.ForAddress(ServerURL);
-            }
-            set { _channel = value; }
+            get => _channel ??= GrpcChannel.ForAddress(ServerURL);
+            set => _channel = value;
         }
     }
 }
